@@ -4,7 +4,10 @@ public class calculaSalario {
 
     public static void main(String[] args) {
         Scanner leitorDeEntradas = new Scanner(System.in);
+        System.out.println("VAMOS CALCULAR SEU SALÁRIO?");
+        System.out.println("DIGITE O VALOR DO SALÁRIO: ");
         float valorSalario = leitorDeEntradas.nextFloat();
+        System.out.println("DIGITE O VALOR DOS BENEFÍCIOS: ");
         float valorBeneficios = leitorDeEntradas.nextFloat();
 
         float valorImposto = 0;
@@ -15,7 +18,8 @@ public class calculaSalario {
         } else {
             valorImposto = 0.15F * valorSalario;
         }
-
+        
+        
         float saida = valorSalario - valorImposto + valorBeneficios;
         System.out.println(String.format("%.2f", saida));
 
